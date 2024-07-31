@@ -27,6 +27,12 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["web-production-06dd4.up.railway.app"]
 
+CSRF_TRUSTED_ORIGINS = ["https://*."]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
 
 # Application definition
 
