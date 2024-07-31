@@ -1,0 +1,36 @@
+{% load static %}
+{% block content %}
+
+
+<footer>
+    <div class="social-footer">
+        {% for social in social_media_links %}
+            <a class="social-footer-item {{ social.name }}" href="{{ social.link }}" target="_blank">
+                {% if social.name == "facebook" %}
+                    <i class="fab fa-2x fa-facebook"></i>
+                {% elif social.name == "twitter" %}
+                    <i class="fab fa-2x fa-twitter"></i>
+                {% elif social.name == "instagram" %}
+                    <i class="fab fa-2x fa-instagram"></i>
+                {% elif social.name == "linkedin" %}
+                    <i class="fab fa-2x fa-linkedin"></i>
+                {% elif social.name == "youtube" %}
+                    <i class="fab fa-2x fa-youtube"></i>
+                {% else %}
+                    <i class="fab fa-2x fa-{{ social.name }}"></i>
+                {% endif %}
+            </a>
+        {% endfor %}
+    </div>
+    <strong class="footer-company-name">08 Kebab</strong><br>
+    {% if address %}
+        <p class="footer-company-address">{{ address.address }}<br>
+            {% if address.phone_number %}
+                <a href="tel:{{ address.phone_number }}" class="text-link">{{ address.phone_number }}</a><br>
+            {% endif %}
+         
+        </p>
+    {% endif %}
+</footer>
+
+{% endblock %}

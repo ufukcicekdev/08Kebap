@@ -1,0 +1,257 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Murad&#039;s Cuisine | Dijital Men&uuml;</title>
+
+
+    <meta name="google" content="notranslate">
+    <meta name="description"
+        content="Bu sayfadan dijital men&uuml;m&uuml;z&uuml; inceleyebilir, bizimle direkt iletişime ge&ccedil;ebilirsiniz.">
+
+    <link rel="canonical" href="index.html">
+    <meta name="robots" content="index,follow">
+
+    <meta http-equiv="cache-control" content="max-age=86400">
+    <meta name="rating" content="all">
+    <meta name="distribution" content="global">
+    <meta name="resource-type" content="document">
+    <meta name="doc-rights" content="public">
+    <meta name="audience" content="all">
+
+    <meta property="og:site_name" content="Dijital Menü Platformu" />
+    <meta property="og:url" content="https://murads-demo.dijital.menu" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Murad&#039;s Cuisine | Dijital Men&uuml;" />
+    <meta property="og:description"
+        content="Bu sayfadan dijital men&uuml;m&uuml;z&uuml; inceleyebilir, bizimle direkt iletişime ge&ccedil;ebilirsiniz." />
+
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/F708B742B0A99F864.css' %}" />
+
+    <link href="{% static 'css/dmenu10f0.css' %}" rel="stylesheet" />
+    <style>
+        :root {
+            --ui-font-set: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            --primary-font-set: "Archer A", "Archer B", serif;
+            --secondary-font-set: "Archer A", "Archer B", serif;
+            --dm-heading1-fontfamily: var(--primary-font-set);
+            --dm-heading1-fontsize: 1.4rem;
+            --dm-heading1-fontweight: 800;
+            --dm-heading1-tracking: -0.013rem;
+            --dm-heading1-texttransform: uppercase;
+            --dm-sp-sectiontitle-fontsize: 1.6rem;
+            --dm-heading2-fontfamily: var(--primary-font-set);
+            --dm-heading2-fontsize: 1.4rem;
+            --dm-heading2-fontweight: 800;
+            --dm-heading2-tracking: -0.013rem;
+            --dm-heading2-texttransform: uppercase;
+            --dm-menusection-fontfamily: var(--primary-font-set);
+            --dm-menusection-fontsize: 1.8rem;
+            --dm-menusection-fontweight: 700;
+            --dm-menusection-tracking: -0.013rem;
+            --dm-menusection-texttransform: uppercase;
+            --dm-menubundletitle-fontsize: 1.4rem;
+            --dm-menubundletitle-fontfamily: var(--primary-font-set);
+            --dm-menubundletitle-fontweight: 500;
+            --dm-pagetitle-fontfamily: var(--primary-font-set);
+            --dm-pagetitle-fontsize: 2.2rem;
+            --dm-pagetitle-fontweight: 800;
+            --dm-pagetitle-tracking: var(--dm-heading1-tracking);
+            --dm-tag-fontfamily: var(--ui-font-set);
+            --dm-tag-fontweight: 500;
+            --dm-tag-fontsize: 0.8rem;
+            --dm-btnorder-fontsize: 0.7rem;
+            --dm-btnorder-fontweight: 800;
+            --dm-btnorder-texttransform: uppercase;
+            --dm-announcement-title-fontsize: 1.2rem;
+            --dm-announcement-p-fontsize: 1rem;
+            --dm-announcement-p-fontfamily: var(--primary-font-set);
+            --dm-announcement-p-fontweight: 500;
+            --dm-fontsize-xl: 2rem;
+            --dm-fontsize-lg: 1.7rem;
+            --dm-fontsize-m: 1.65rem;
+            --dm-fontsize-r: 1.5rem;
+            --dm-fontsize-s: 1.2rem;
+            --dm-fontsize-xs: 1rem;
+            --dm-fontsize-xxs: 0.7rem;
+            --dm-letterspacing-snug: 0rem;
+            --dm-rounded-xs: 2px;
+            --dm-rounded-s: 3px;
+            --dm-rounded-r: 6px;
+            --dm-rounded-full: 1242px;
+            --dm-itembox-mb: 24px;
+            --dm-itembox-title-fontfamily: var(--primary-font-set);
+            --dm-itembox-title-fontsize: 1.2rem;
+            --dm-itembox-title-fontweight: 800;
+            --dm-itembox-title-tracking: -0.01rem;
+            --dm-itembox-title-texttransform: inherit;
+            --dm-itembox-titlefeatured-fontsize: 1.5rem;
+            --dm-itembox-p-fontfamily: var(--primary-font-set);
+            --dm-itembox-p-fontsize: 1rem;
+            --dm-itembox-p-fontweight: 500;
+            --dm-itembox-p-lineheight: 140%;
+            --dm-itembox-variation-fontfamily: var(--primary-font-set);
+            --dm-itembox-variation-fontweight: var(--dm-itembox-title-fontweight);
+            --dm-itembox-variation-fontsize: var(--dm-fontsize-xs);
+            --dm-itembox-price-fontfamily: var(--primary-font-set);
+            --dmst-gul: inherit;
+        }
+
+        :root {
+            --dm-bgcolor: #faeee0;
+            --dm-sidebar-bg: linear-gradient(180deg, #434343, #000);
+            --dm-color: #562400;
+            --dm-link-color: #3498db;
+            --dm-bg-gradient: #3e1e07;
+            --dm-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6), 1px 1px 8px rgba(0, 0, 0, 0.9);
+            --dm-sticky-header-color: rgba(60, 30, 20, 0.3);
+            --dm-shadowglass: rgba(0, 0, 0, 0.3);
+            --dm-heading1-color: #562400;
+            --dm-heading2-color: #562400;
+            --dm-menusection-color: #fff;
+            --dm-promobadge-bgcolor: rgba(254, 243, 199, 1);
+            --dm-promobadge-color: rgba(180, 83, 9, 1);
+            --dm-tag-s1-bgcolor: #ff6b81;
+            --dm-tag-s1-color: #FFFFFF;
+            --dm-tag-s2-bgcolor: #1e90ff;
+            --dm-tag-s2-color: #FFFFFF;
+            --dm-tag-s3-bgcolor: #1abc9c;
+            --dm-tag-s3-color: #FFFFFF;
+            --dm-tag-s4-bgcolor: #8e44ad;
+            --dm-tag-s4-color: #FFFFFF;
+            --dm-tag-s5-bgcolor: #e67e22;
+            --dm-tag-s5-color: #FFFFFF;
+            --dm-tag-s6-bgcolor: #34495e;
+            --dm-tag-s6-color: #FFFFFF;
+            --dm-btnadd-bgcolor: #562400;
+            --dm-btnadd-color: #ffffff;
+            --dm-btnorder-bgcolor: #e67e22;
+            --dm-btnorder-color: #ffffff;
+            --dm-announcement-bgcolor: #fff;
+            --dm-announcement-title-color: var(--dm-heading1-color);
+            --dm-action-navigate-color: #FFC312;
+            --dm-action-call-color: #00a8ff;
+            --dm-action-share-color: #ED4C67;
+            --dm-shadow-action: none;
+            --dm-itembox-title-color: #e67e22;
+            --dm-itembox-p-color: inherit;
+            --dm-order-btnorder-whatsapp-bgcolor: #34bf49;
+            --dm-itembox-featured-bgcolor: #3e1e07;
+            --dm-itembox-titlefeatured-color: #e67e22;
+            --dm-itembox-pfeatured-color: #ffffff;
+            --dm-footerinstagram-color: var(--dm-color);
+            --dm-footertwitter-color: var(--dm-color);
+            --dm-footerfacebook-color: var(--dm-color);
+            --dm-footeryoutube-color: var(--dm-color);
+            --dm-footerfoursquare-color: var(--dm-color);
+            --dm-footertripadvisor-color: var(--dm-color);
+            --dm-relatedbox-bgcolor: #e9b6a9;
+            --dm-order-nocart-color: #a0144b;
+            --dmst-yıldırım: inherit;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}" />
+    <style>
+        .swiper {
+            display: none;
+        }
+
+        .close-btn {
+            display: block;
+            position: absolute;
+            right: 0;
+            width: 48px;
+            height: 48px;
+            background-color: transparent;
+            z-index: 1000;
+        }
+
+        .arrow {
+            position: absolute;
+            height: 3px;
+            width: 25px;
+            background-color: rgba(255, 255, 255, 1);
+            top: 24px;
+            left: 11px;
+        }
+
+        .a1 {
+            transform: rotate(45deg);
+        }
+
+        .a2 {
+            transform: rotate(-45deg);
+        }
+
+        .swiper.is-active {
+            display: block;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.9);
+            z-index: 1000000;
+        }
+
+        .swiper-pagination {
+            position: relative;
+            margin-top: 10px;
+        }
+    </style>
+    <style>
+        .termsfeed-com---palette-light.termsfeed-com---nb {
+            background-color: #d6d9e6 !important;
+        }
+
+        .termsfeed-com---palette-light .cc-nb-okagree {
+            background-color: #2d83c4 !important;
+        }
+
+        .termsfeed-com---nb .cc-nb-main-container {
+            padding: 0.8rem !important;
+        }
+
+        .termsfeed-com---nb .cc-nb-title {
+            font-size: 13px !important;
+        }
+
+        .termsfeed-com---nb .cc-nb-text {
+            font-size: 10px !important;
+            margin: 0 0 0.4rem 0 !important;
+        }
+
+        .termsfeed-com---reset p {
+            margin-bottom: 0.2rem !important;
+        }
+    </style>
+</head>
+
+<body class="view-menu">
+    
+    {% block content %}
+
+    {% endblock content %}
+
+    <script src="{% static 'js/dmenu-visitor-qrmenu34f1.js' %}"></script>
+
+    
+</body>
+
+
+</html>

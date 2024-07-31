@@ -1,0 +1,63 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %} {{ category.name }} {% endblock title %}
+
+{% block content %}
+
+
+<div class="sidepage-hero"
+        style="background-image: url({{ category.image.url }})">
+        <div class="dmu_dark-overlay"></div> <a href="index.html" class="sidepage-hero__link">
+            <img class="sidepage-hero__logo--s"
+                src="{% static 'img/logo.png' %}">
+        </a>
+        <h1 class="sidepage-hero__title"> {{ category.name }}</h1>
+        <a class="sidepage-hero__btn" href="{% url 'app:home' %}">
+            Zurück zum Menü
+        </a>
+
+       
+    </div>
+
+
+
+
+    <div class="items-container ">
+        <h3 class="section-subtitle" style="position:sticky;">{{ category.name }}</h3>
+        <p class="section-subtitle-description"></p>
+        {% for product in products %}
+        <div id="i-219786" class="item-box                                                             ">
+            <div class="item-content">
+                <div class="primary-content">
+                    <div class="primary-head">
+                        <div class="primary-headtext">
+                            <h4 class="primary-title ">
+                                {{ product.name }}
+                            </h4>
+                        </div>
+                        <div class="dots"></div>
+                        <div class="price-box">
+                            <div class="price-content --item">
+                                <div class="price">
+                                    {{ product.display_price }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p>{{ product.ingredients }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+
+
+{% include 'core/telephone.html' %}
+
+{% include 'core/footer.html' %}
+{% endblock %}

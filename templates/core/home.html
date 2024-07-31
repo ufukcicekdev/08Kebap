@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}  {% endblock title %}
+
+{% block content %}
+
+
+
+
+
+<div class="sidepage-hero"
+    style="background-image: url('../assets.dijital.menu/photos/2jtXo5bNftnpxx16/hero/menu/8b7fc403dd11e5989da39695624f82a1.jpg')">
+
+    <a href="index.html">
+        <img class="sidepage-hero__logo--l"
+            src="{% static 'img/logo.png' %}"
+            alt="Murad&#039;s Cuisine Logosu">
+    </a>
+
+
+</div>
+
+
+
+<div class="sections-content">
+    <div id="menu-content" class="menu-grid">
+        
+        {% for category in categories %}
+        <a class="menu-grid-item style-4" href="{% url 'app:category_detail' category.id %}" 
+            style="background-image: url({{ category.image.url }})">
+            <div class="black-box"></div>
+            <span class="text-box">{{ category.name }}</span>
+        </a>
+        {% empty %}
+        <p>No categories available.</p>
+        {% endfor %}
+        
+    </div>
+</div>
+
+
+
+
+
+{% include 'core/telephone.html' %}
+
+{% include 'core/footer.html' %}
+{% endblock %}

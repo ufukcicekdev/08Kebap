@@ -1,0 +1,65 @@
+{% load static %}
+{% block content %}
+
+<style>
+    /* Arama butonu CSS kodlarını kendinize göre düzenleyebilirsiniz */
+    .telefon-ara-btn {
+        color: white;
+        background: #2c8a00;
+        font-size: 24px;
+        padding: 3px 11px 3px;
+        text-decoration: none;
+        font-family: Nunito;
+        border-radius: 5px;
+        font-weight: 600;
+        position: fixed;
+        bottom: 20px; /* Sayfanın alt kısmında */
+        right: 20px; /* Sayfanın sağında */
+        transform: translateY(-50%);
+        z-index: 9999;
+    }
+
+    .telefon-ara-btn:hover {
+        padding: 4px 12px 4px;
+        transition: 0.5s;
+        background: #35a800;
+    }
+
+    .whatsapp-btn {
+        color: white;
+        background: #25D366; /* WhatsApp yeşili */
+        font-size: 24px;
+        padding: 3px 11px 3px;
+        text-decoration: none;
+        font-family: Nunito;
+        border-radius: 5px;
+        font-weight: 600;
+        position: fixed;
+        bottom: 20px; /* Sayfanın alt kısmında */
+        left: 20px; /* Sayfanın solunda */
+        transform: translateY(-50%);
+        z-index: 9999;
+    }
+
+    .whatsapp-btn:hover {
+        padding: 4px 12px 4px;
+        transition: 0.5s;
+        background: #128C7E; /* WhatsApp yeşilinin koyu tonu */
+    }
+</style>
+
+
+{% if address %}
+    {% if address.whatsapp_number %}
+        <a class="whatsapp-btn" href="https://wa.me/{{ address.whatsapp_number }}" target="_blank">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        </a>
+    {% endif %}
+    {% if address.phone_number %}
+        <a class="telefon-ara-btn" href="tel:{{ address.phone_number }}">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+        </a>
+    {% endif %}
+{% endif %}
+
+{% endblock %}
