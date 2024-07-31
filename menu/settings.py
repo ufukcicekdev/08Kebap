@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 load_dotenv()
 
@@ -88,19 +88,19 @@ WSGI_APPLICATION = "menu.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': os.getenv('PROD_DATABASE_ENGINE'),
-        'NAME': os.getenv('PROD_DATABASE_NAME'),
-        'USER': os.getenv('PROD_DATABASE_USER'),
-        'PASSWORD': os.getenv('PROD_DATABASE_PASSWORD'),
-        'HOST': os.getenv('PROD_DATABASE_HOST'),
-        'PORT': os.getenv('PROD_DATABASE_PORT'),
-        'OPTIONS': {
-            'sslmode': 'require',  # SSL gereklilik durumu
-        },
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': os.getenv('PROD_DATABASE_ENGINE'),
+#         'NAME': os.getenv('PROD_DATABASE_NAME'),
+#         'USER': os.getenv('PROD_DATABASE_USER'),
+#         'PASSWORD': os.getenv('PROD_DATABASE_PASSWORD'),
+#         'HOST': os.getenv('PROD_DATABASE_HOST'),
+#         'PORT': os.getenv('PROD_DATABASE_PORT'),
+#         'OPTIONS': {
+#             'sslmode': 'require',  # SSL gereklilik durumu
+#         },
+#     }
+# }
 
 
 
