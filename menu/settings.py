@@ -19,6 +19,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 load_dotenv()
 
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',  # SQLite için doğru engine
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -26,7 +33,7 @@ load_dotenv()
 SECRET_KEY = "django-insecure-s+i#%cvk6_%zg9yxjmbsh@^5adp1i)ij++4dzfw1k2*@h%*q&l"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 #ALLOWED_HOSTS = ["*"]
@@ -83,6 +90,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "menu.wsgi.application"
+
+
 
 
 # Database
