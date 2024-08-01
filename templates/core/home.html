@@ -27,14 +27,14 @@
     <div id="menu-content" class="menu-grid">
         
         {% for category in categories %}
-        <a class="menu-grid-item style-4" href="{% url 'app:category_detail' category.id %}" 
-            style="background-image: url({{ category.image.url }})">
+        <a class="menu-grid-item style-4" href="{% url 'app:category_detail' category.id %}"
+            style="background-image: url({{ category.image.url if category.image else '' }})">
             <div class="black-box"></div>
             <span class="text-box">{{ category.name }}</span>
         </a>
-        {% empty %}
+    {% empty %}
         <p>No categories available.</p>
-        {% endfor %}
+    {% endfor %}
         
     </div>
 </div>
