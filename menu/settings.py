@@ -19,13 +19,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv()
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # SQLite için doğru engine
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -33,10 +26,10 @@ DATABASES = {
 SECRET_KEY = "django-insecure-s+i#%cvk6_%zg9yxjmbsh@^5adp1i)ij++4dzfw1k2*@h%*q&l"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
-#ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ["*"]
 
 ALLOWED_HOSTS = ["08kebap.up.railway.app","35.214.179.121:443"]
 
@@ -99,6 +92,19 @@ WSGI_APPLICATION = "menu.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
+DATABASES = {
+    'default': {
+        'ENGINE': os.getenv('DEV_DATABASE_ENGINE'),
+        'NAME': os.getenv('DEV_DATABASE_NAME'),
+        'USER': os.getenv('DEV_DATABASE_USER'),
+        'PASSWORD': os.getenv('DEV_DATABASE_PASSWORD'),
+        'HOST': os.getenv('DEV_DATABASE_HOST'),
+        'PORT': os.getenv('DEV_DATABASE_PORT'),
+        'OPTIONS': {
+            'sslmode': 'require',  # SSL gereklilik durumu
+        },
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
