@@ -7,7 +7,9 @@
 
 
 <div class="sidepage-hero"
-        style="background-image: url({{ category.image.url }})">
+{% if category.image %}
+style="background-image: url({{ category.image.url }});"
+{% endif %}>
         <div class="dmu_dark-overlay"></div> <a href="index.html" class="sidepage-hero__link">
             <img class="sidepage-hero__logo--s"
                 src="{% static 'img/logo.png' %}">
@@ -27,39 +29,40 @@
         <h3 class="section-subtitle" style="position:sticky;">{{ category.name }}</h3>
         <p class="section-subtitle-description"></p>
         {% for product in products %}
-    <div id="i-219786" class="item-box">
-        <div class="item-content">
+        <div id="i-{{ product.id }}" class="item-box item-box-image">
             {% if product.image %}
-                <div class="product-image">
-                    <img src="{{ product.image.url if product.image else '' }}" alt="{{ product.name }}">
-                </div>
+                <img class="item-image swiper-thumb"
+                     src="{{ product.image.url }}"
+                     alt="{{ product.name }}"
+                     data-title="{{ product.name }}"
+                     data-desc="{{ product.ingredients }}"
+                     data-image="{{ product.image.url }}">
             {% endif %}
-            <div class="primary-content">
-                <div class="primary-head">
-                    <div class="primary-headtext">
-                        <h4 class="primary-title">
-                            {{ product.name }}
-                        </h4>
-                    </div>
-                    <div class="dots"></div>
-                    <div class="price-box">
-                        <div class="price-content --item">
-                            <div class="price">
-                                {{ product.display_price }}
+            <div class="item-content">
+                <div class="primary-content">
+                    <div class="primary-head">
+                        <div class="primary-headtext">
+                            <h4 class="primary-title w-image">
+                                {{ product.name }}
+                            </h4>
+                        </div>
+                        <div class="dots"></div>
+                        <div class="price-box">
+                            <div class="price-content --item">
+                                <div class="price">
+                                    {{ product.display_price }}
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <p>{{ product.ingredients }}</p>
                 </div>
-                <p>{{ product.ingredients }}</p>
             </div>
         </div>
-    </div>
-{% endfor %}
+    {% endfor %}
+    
 
     </div>
-
-
-
 
 
 {% include 'core/telephone.html' %}

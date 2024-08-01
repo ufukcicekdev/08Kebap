@@ -24,7 +24,9 @@
     </div>
     <strong class="footer-company-name">08 Kebab</strong><br>
     {% if address %}
-        <p class="footer-company-address">{{ address.address }}<br>
+        <p class="footer-company-address">{% if address.address %}
+            {{ address.address }}<br>
+        {% endif %}<br>
             {% if address.phone_number %}
                 <a href="tel:{{ address.phone_number }}" class="text-link">{{ address.phone_number }}</a><br>
             {% endif %}
