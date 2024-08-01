@@ -33,7 +33,7 @@ DATABASES = {
 SECRET_KEY = "django-insecure-s+i#%cvk6_%zg9yxjmbsh@^5adp1i)ij++4dzfw1k2*@h%*q&l"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 #ALLOWED_HOSTS = ["*"]
@@ -163,15 +163,6 @@ JAZZMIN_SETTINGS = {
 
     "default_icon_parents": "fas fa-chevron-circle-right",
     "default_icon_children": "fas fa-circle",
-
-    "topmenu_links": [
-
-        # Url that gets reversed (Permissions can be added)
-        {"name": "AnaSayfa",  "url": "admin:index", "permissions": ["auth.view_user"]},
-
-        {"name": "Ürünler", "model": "products.product"},
-
-    ],
 }
 
 
