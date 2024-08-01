@@ -29,7 +29,7 @@ SECRET_KEY = "django-insecure-s+i#%cvk6_%zg9yxjmbsh@^5adp1i)ij++4dzfw1k2*@h%*q&l
 DEBUG = False
 
 
-# ALLOWED_HOSTS = ["*"]
+#ALLOWED_HOSTS = ["*"]
 
 ALLOWED_HOSTS = ["08kebap.up.railway.app","35.214.179.121:443"]
 
